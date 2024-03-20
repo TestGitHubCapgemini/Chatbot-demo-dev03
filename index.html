@@ -567,11 +567,26 @@
 	}
 </style>
 
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #e1412d;
+		font-family: "Salesforce Sans", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #e1412d;
+	}
+	@font-face {
+		font-family: 'Salesforce Sans';
+		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+	}
+</style>
+
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = 'es'; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.language = 'en'; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
@@ -592,17 +607,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://psa-customerfirst--dev02.sandbox.my.salesforce.com',
-			'https://psa-customerfirst--dev02.sandbox.my.site.com/citroen',
+			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
+			'https://psa-customerfirst--devhotfix.sandbox.my.site.com/citroen',
 			gslbBaseURL,
-			'00D7Z00000054AZ',
-			'ES_Chat_Citroen',
+			'00D5r0000004ddY',
+			'UK_Chat_Citroen',
 			{
 				baseLiveAgentContentURL: 'https://c.la3-c1cs-fra.salesforceliveagent.com/content',
 				deploymentId: '5721r0000004Fqg',
-				buttonId: '5731r000000btlf',
+				buttonId: '57369000000TZP2',
 				baseLiveAgentURL: 'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1r000000KzP1EAK_17332fb2261',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5E00000000XUUAY_174319b6edc',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -610,7 +625,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://psa-customerfirst--dev02.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
